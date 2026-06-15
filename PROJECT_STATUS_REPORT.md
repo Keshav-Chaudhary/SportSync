@@ -78,6 +78,7 @@ Transitioned from client-side DB calls to a secure REST API architecture:
 - **Error Handling & Safeguards**: Added specific error messages to dashboard cards, including strict warning modals before executing destructive actions like deleting user accounts.
 - **Visuals**: Added progress bars for equipment utilization and status badges for system health.
 - **Dashboard Completion**: Fully implemented Staff and Student dashboards with role-specific features and API integration.
+- **Automated Testing Suite**: Implemented comprehensive E2E and API verification tests using Playwright covering login authentication, dashboard metrics, developer tools, custom SQL execution, and system report exports. All 19 tests pass successfully.
 
 ## 5. Next Steps / Pending Items
 - **Relational Algebra Demo**: Add visual demonstrations of database operations (Selection, Projection, Union, Cartesian Product, Joins).

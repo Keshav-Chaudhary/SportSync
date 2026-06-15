@@ -60,11 +60,28 @@ For detailed information about specific parts of the system, refer to the specia
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+## 🧪 Running Tests
+
+A comprehensive E2E and API testing suite is set up using Playwright to test all user roles, navigation flow, API constraints, and reports:
+
+1. Ensure the development server is running locally:
+   ```bash
+   npm run dev
+   ```
+2. Run the test suite:
+   ```bash
+   npx playwright test
+   ```
+3. To view the HTML test reports:
+   ```bash
+   npx playwright show-report
+   ```
+
 ## 👨‍💻 Default Test Credentials
 
 - **Admin**: `admin1@gmail.com` / `123456`
-- **Staff**: `staff1@gmail.com` / `123456`
-- **Student**: `student1@gmail.com` / `123456`
+- **Staff**: `staff5@gmail.com` / `123456`
+- **Student**: `student5@gmail.com` / `123456`
 
 ## 📝 License
 

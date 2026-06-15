@@ -22,6 +22,11 @@ This document outlines the coding standards, patterns, and quality guidelines es
 - **Feedback**: Forms and data-fetching hooks implement loading spinners (e.g., `<Loader2>`) and success/error alert banners to ensure a smooth user experience.
 - **Modern Aesthetics**: Leveraging glassmorphism, animated cards (`animate-in fade-in`), and semantic badges (e.g., `destructive` for overdue items).
 
-## 5. Maintenance
+## 5. Testing & Verification
+- **E2E Testing**: UI features, navigation, and user actions (Admin, Staff, and Student portals) are verified using Playwright.
+- **API Testing**: Role-based access control (RBAC) and raw payload outputs are tested via Playwright API request contexts.
+- **Sequenced Execution**: Tests run sequentially with 1 worker to ensure database operations do not conflict.
+
+## 6. Maintenance
 - Regular audits of `package.json` dependencies.
 - Removal of dead code, unused imports, and console logs before committing to production branches.
