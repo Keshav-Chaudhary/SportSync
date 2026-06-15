@@ -35,13 +35,13 @@ export default async function StudentEquipmentPage() {
             Sports Equipment
           </h2>
           <p className="text-sm md:text-base text-muted-foreground mt-2">
-            Browse available sports equipment in our inventory and request a loan.
+            Browse available sports equipment in our inventory. Please coordinate with a staff member at the front desk to borrow items.
           </p>
         </div>
 
         {/* EQUIPMENT BROWSER CONTAINER */}
         <div className="border border-border/55 rounded-2xl p-4 md:p-6 bg-card/60 backdrop-blur-sm shadow-sm animate-in fade-in slide-in-from-bottom-4 duration-700 delay-100 fill-mode-both w-full overflow-hidden">
-          <EquipmentBrowser readOnly={false} />
+          <EquipmentBrowser readOnly={true} />
         </div>
 
       </main>

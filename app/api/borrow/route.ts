@@ -9,15 +9,11 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
     }
 
-    // Check if user is a student
-    const [userRole] = await pool.query(
-      'SELECT ur.role FROM USER_ROLES ur WHERE ur.user_id = ?',
-      [session.user_id]
-    ) as any
-
-    if (!userRole || userRole[0]?.role !== 'STUDENT') {
-      return NextResponse.json({ error: 'Only students can borrow equipment' }, { status: 403 })
-    }
+    // Students cannot borrow equipment directly via the API. Only staff can issue loans.
+    return NextResponse.json(
+      { error: 'Forbidden: Students cannot request loans directly. Please coordinate with a staff member at the desk.' },
+      { status: 403 }
+    )
 
     // Get student_id (roll_no)
     const [studentResult] = await pool.query(

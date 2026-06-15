@@ -50,7 +50,7 @@ export function StudentQuickActions() {
         <QuickAction
           icon={Search}
           title="Browse Equipment"
-          description="Browse and request sports gear"
+          description="Browse available sports gear"
           onClick={() => goTo('/student/equipment')}
         />
         <QuickAction

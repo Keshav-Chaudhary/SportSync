@@ -5,9 +5,9 @@ A comprehensive Role-Based Access Control (RBAC) web application for managing gy
 ## 🚀 Features
 
 - **Role-Based Access**: Specialized portals for Admins, Staff, and Students.
-- **Gym Entry Management**: Track real-time gym occupancy and logs.
+- **Gym Entry Management**: Real-time facility occupancy monitoring. Gym check-in and check-out entries are recorded exclusively by Staff attendants at the front desk.
 - **Equipment Inventory**: Manage equipment catalog, track usage, and monitor quantities.
-- **Loans System**: Handle borrowing and returning of sports equipment with overdue tracking.
+- **Loans System**: Equipment loan issues and return processing. Transactions are recorded and managed exclusively by Staff; students have a read-only dashboard view to search gear and track active loans.
 - **Interactive Dashboards**: Comprehensive analytics and metrics for all user roles.
 - **Admin Tools**: Built-in SQL Playground, System Health Monitoring, and Trigger Overview.
 
@@ -69,13 +69,13 @@ Staff accounts manage daily gym operations, equipment loan workflows, returns, a
 
 ### 🎓 Student Portal
 
-Students can check gym occupancy, check-in to gym sessions, browse the equipment catalog, track active loans, and download reports.
+Students can monitor facility occupancy, browse the equipment catalog, track active loans/history, and download their reports. (Note: Borrowing transactions and gym entry sessions are recorded exclusively by Staff attendants).
 
 | Desktop View | Mobile View |
 | :---: | :---: |
 | <img src="./public/showcase/student_dashboard_desktop.png" width="550" alt="Student Dashboard Desktop" style="border-radius: 8px; border: 1px solid #ddd;" /> <br> **Student Dashboard** | <img src="./public/showcase/student_dashboard_mobile.png" width="180" alt="Student Dashboard Mobile" style="border-radius: 8px; border: 1px solid #ddd;" /> <br> **Student Dashboard (Mobile)** |
-| <img src="./public/showcase/student_equipment_desktop.png" width="550" alt="Student Equipment Desktop" style="border-radius: 8px; border: 1px solid #ddd;" /> <br> **Equipment Catalog Search & Borrow** | <img src="./public/showcase/student_equipment_mobile.png" width="180" alt="Student Equipment Mobile" style="border-radius: 8px; border: 1px solid #ddd;" /> <br> **Catalog Browser (Mobile)** |
-| <img src="./public/showcase/student_gym_desktop.png" width="550" alt="Student Gym Access Desktop" style="border-radius: 8px; border: 1px solid #ddd;" /> <br> **Gym Check-in Status** | <img src="./public/showcase/student_gym_mobile.png" width="180" alt="Student Gym Access Mobile" style="border-radius: 8px; border: 1px solid #ddd;" /> <br> **Gym Status (Mobile)** |
+| <img src="./public/showcase/student_equipment_desktop.png" width="550" alt="Student Equipment Desktop" style="border-radius: 8px; border: 1px solid #ddd;" /> <br> **Equipment Catalog Search & Browse (Read-only)** | <img src="./public/showcase/student_equipment_mobile.png" width="180" alt="Student Equipment Mobile" style="border-radius: 8px; border: 1px solid #ddd;" /> <br> **Catalog Browser (Mobile)** |
+| <img src="./public/showcase/student_gym_desktop.png" width="550" alt="Student Gym Access Desktop" style="border-radius: 8px; border: 1px solid #ddd;" /> <br> **Gym Occupancy & Access Status (Read-only)** | <img src="./public/showcase/student_gym_mobile.png" width="180" alt="Student Gym Access Mobile" style="border-radius: 8px; border: 1px solid #ddd;" /> <br> **Gym Status (Mobile)** |
 | <img src="./public/showcase/student_loans_desktop.png" width="550" alt="Student Loans Desktop" style="border-radius: 8px; border: 1px solid #ddd;" /> <br> **Active Loans & History** | *(Desktop optimized detail table)* |
 
 ## 🛠️ Tech Stack
