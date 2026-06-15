@@ -1,122 +1,115 @@
-# Gym & Sports System - Project Structure (14 April)
+# Gym & Sports System - Project Structure (15 June)
 
 ```
-d:/College_Related/Courses/DBMS/Project/Working_on_Ui/gym-and-sports-system/
+SportSync/
 ├── .gitignore
 ├── components.json
-├── middleware.ts                 # RBAC protection (new)
+├── middleware.ts                 # RBAC protection
 ├── next.config.mjs
 ├── package.json
 ├── pnpm-lock.yaml
 ├── postcss.config.mjs
 ├── tsconfig.json
-├── PROJECT_STATUS_REPORT.md      # Status & fixes (updated)
-├── README-ADMIN.md               # Admin features (security note)
-├── README-STAFF.md               # Staff ops (security note)
-├── README-STUDENT.md             # Student portal (security note)
+├── PROJECT_STATUS_REPORT.md      # Status & fixes
+├── README.md                     # Main Project Entry
+├── README-ADMIN.md               # Admin features
+├── README-STAFF.md               # Staff ops
+├── README-STUDENT.md             # Student portal
 ├── TEAM_SETUP_GUIDE.md
-├── TODO.md                       # Security complete
+├── TODO.md                       
 │
-├── app/                          # App Router (Next.js 16)
+├── app/                          # App Router (Next.js 14+)
 │   ├── globals.css
 │   ├── layout.tsx
 │   ├── mode-toggle.tsx
 │   ├── page.tsx                  # Landing page
 │   ├── admin/
-│   │   └── page.tsx              # Admin dashboard (dev gated)
+│   │   ├── layout.tsx
+│   │   ├── page.tsx              # Admin dashboard 
+│   │   ├── analytics/page.tsx
+│   │   ├── equipment/page.tsx
+│   │   ├── sql/page.tsx          # SQL Playground / Relational Algebra
+│   │   ├── system/page.tsx
+│   │   └── users/page.tsx
 │   ├── api/                      # Secure APIs
 │   │   ├── admin/
 │   │   │   ├── analytics/route.ts
-│   │   │   ├── equipment/
-│   │   │   ├── export/
-│   │   │   ├── loans/
-│   │   │   ├── recent-activity/
-│   │   │   ├── schema/
-│   │   │   ├── sql-playground/   # ADMIN-only (fixed)
-│   │   │   │   └── route.ts
-│   │   │   ├── system/
-│   │   │   ├── system-health/
-│   │   │   └── users/
+│   │   │   ├── equipment/route.ts
+│   │   │   ├── export/           # Data & PDF Exports
+│   │   │   │   ├── data/route.ts
+│   │   │   │   └── pdf/route.ts
+│   │   │   ├── loans/route.ts
+│   │   │   ├── recent-activity/route.ts
+│   │   │   ├── schema/route.ts
+│   │   │   ├── sql-playground/route.ts
+│   │   │   ├── system/route.ts
+│   │   │   └── users/route.ts
 │   │   ├── borrow/route.ts
 │   │   ├── equipment/route.ts
 │   │   ├── equipment-categories/route.ts
-│   │   ├── gym/
-│   │   │   └── occupancy/
-│   │   ├── gym-entries/
-│   │   │   ├── route.ts
-│   │   │   ├── [id]/
-│   │   │   ├── history/
-│   │   │   └── log/
-│   │   ├── loans/                # Role-secured (fixed)
-│   │   │   ├── route.ts
-│   │   │   ├── [id]/
-│   │   │   └── history/
-│   │   ├── reports/
-│   │   ├── staff/
-│   │   │   └── equipment-analytics/route.ts
+│   │   ├── gym/occupancy/route.ts
+│   │   ├── gym-entries/route.ts
+│   │   ├── loans/route.ts
+│   │   ├── staff/equipment-analytics/route.ts
 │   │   ├── stats/route.ts
 │   │   ├── test-db/route.ts
-│   │   ├── user-account/route.ts
-│   │   └── users/route.ts
+│   │   └── auth/                 # Auth APIs
 │   ├── auth/
-│   │   ├── callback/route.ts
-│   │   ├── error/page.tsx
 │   │   ├── login/page.tsx
 │   │   └── sign-up/page.tsx
 │   ├── profile/page.tsx
-│   ├── staff/page.tsx            # session.role auth (fixed)
-│   └── student/page.tsx          # session.role auth (fixed)
+│   ├── staff/                    # Staff portal
+│   │   ├── layout.tsx
+│   │   ├── page.tsx
+│   │   ├── equipment/page.tsx
+│   │   ├── gym/page.tsx
+│   │   └── loans/page.tsx
+│   └── student/                  # Student portal
+│       ├── layout.tsx
+│       ├── page.tsx
+│       ├── equipment/page.tsx
+│       ├── gym/page.tsx
+│       └── loans/page.tsx
 │
 ├── components/                   # Shadcn/UI + Custom
 │   ├── mode-toggle.tsx
 │   ├── theme-provider.tsx
-│   ├── admin/ (8 files)
+│   ├── admin/ 
 │   │   ├── admin-analytics.tsx
-│   │   ├── dev-mode-wrapper.tsx  # Client toggle (gated)
-│   │   ├── equipment-overview.tsx
-│   │   ├── loan-tracking.tsx
-│   │   ├── quick-actions.tsx
-│   │   ├── recent-activity.tsx
+│   │   ├── admin-sidebar.tsx
+│   │   ├── download-admin-report.tsx
 │   │   ├── sql-playground.tsx
-│   │   ├── system-overview.tsx
-│   │   └── trigger-overview.tsx
 │   │   └── user-management.tsx
 │   ├── dashboard/
-│   │   ├── header.tsx
-│   │   └── stats-card.tsx
 │   ├── layout/
-│   │   └── footer.tsx
-│   ├── staff/ (6 files)
-│   ├── student/ (8 files)
-│   └── ui/ (50+ Shadcn components)
+│   ├── staff/ 
+│   │   ├── equipment-analytics.tsx
+│   │   ├── staff-sidebar.tsx
+│   │   └── gym-activity-log.tsx
+│   ├── student/ 
+│   │   ├── download-report.tsx
+│   │   ├── student-sidebar.tsx
+│   │   └── gym-check-in.tsx
+│   └── ui/                       # Shadcn components
 │
 ├── hooks/
 │   ├── use-mobile.ts
 │   └── use-toast.ts
 │
-├── lib/                         # Utils + Core
+├── lib/                          # Utils + Core
 │   ├── types.ts
 │   ├── utils.ts
-│   ├── actions/auth.ts
 │   ├── auth/
 │   │   ├── jwt.ts
 │   │   ├── password.ts
-│   │   └── session.ts           # Verified JWT
+│   │   └── session.ts           
 │   └── db/
-│       └── mysql.ts
+│       └── mysql.ts              # Local MySQL connection
 │
-├── public/                      # Static assets
-│   ├── icon.svg
-│   └── placeholders (logo/user)
-│
-├── scripts/                     # DB Setup
+├── scripts/                      # DB Setup
 │   ├── 001_create_tables.sql
 │   └── 002_seed_data.sql
 └── styles/
-    └── globals.css
 ```
 
-**Total Files**: 180+ | **Security Hardened**: 14 April | **Production Ready**
-
-*Generated by BLACKBOXAI*
-
+**Total Files**: 200+ | **Security Hardened**: 15 June | **Production Ready**

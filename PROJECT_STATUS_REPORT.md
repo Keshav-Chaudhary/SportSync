@@ -53,6 +53,7 @@ Student-focused features for gym and equipment access:
 ### E. API Layer
 Transitioned from client-side DB calls to a secure REST API architecture:
 - `/api/admin/*`: Administrative data endpoints (System stats, Loans, Showcase).
+- `/api/admin/export/*`: Data export functionalities (JSON/PDF).
 - `/api/stats`: General statistics for dashboards.
 - `/api/auth/*`: Login, Signup, and Session management.
 - `/api/equipment`: Inventory data access.
@@ -80,8 +81,7 @@ Transitioned from client-side DB calls to a secure REST API architecture:
 
 ## 5. Next Steps / Pending Items
 - **Relational Algebra Demo**: Add visual demonstrations of database operations (Selection, Projection, Union, Cartesian Product, Joins).
-- **CSV Export**: Enable data export functionality for query results and reports.
 - **Schema Documentation**: Complete live database schema viewer with constraints and relationships.
 
 ---
-*Updated: 14 April - Security audit complete: RBAC middleware, protected dev tools/SQL playground, consistent session auth, no known vulnerabilities*
+*Updated: 15 June - Security audit complete, data export and advanced component updates integrated.*

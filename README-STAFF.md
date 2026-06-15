@@ -14,15 +14,17 @@
 - ⚡ Quick Actions: Common staff operations (issue/return/checkin)
 ```
 
-### Core Components (6 files):
+### Core Components:
 ```
 components/staff/
-├── equipment-analytics.tsx     - Charts: Top equipment, usage trends (✓ TODO)
+├── equipment-analytics.tsx     - Charts: Top equipment, usage trends
 ├── equipment-management.tsx    - Issue form (roll_no → student_id)
 ├── gym-activity-log.tsx        - Recent checkouts/history
 ├── gym-entry-log.tsx           - Live check-in/out search by roll_no
 ├── loan-management.tsx         - Active loans table
-└── staff-quick-actions.tsx     - Staff ops panel
+├── staff-quick-actions.tsx     - Staff ops panel
+├── staff-recent-activity.tsx   - Recent operations tracking
+└── staff-sidebar.tsx           - Navigation sidebar
 ```
 
 ### Backend APIs:
@@ -57,7 +59,7 @@ Layout:
 - ✅ Staff auto-assigned as loan issuer
 - ✅ Gym live occupancy (COUNT exit_time IS NULL)
 - ✅ Roll_no search → student_id validation
-- **Security Audit COMPLETE (14 April)**: Role checks standardized to session.role (no more DB queries), middleware RBAC prevents unauthorized access, API endpoints hardened. Production-secure.
+- **Security Audit COMPLETE (15 June)**: Role checks standardized to session.role, middleware RBAC prevents unauthorized access, API endpoints hardened. Production-secure.
 
 **Staff can fully manage daily operations end-to-end via an ultra-responsive UI.**
 

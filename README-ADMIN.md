@@ -14,11 +14,15 @@
 - ⚡ SQL Playground: Execute 10+ demo queries (ACID, joins, constraints)
 - 🎯 Trigger Overview: Auto-overdue, quantity validation triggers
 - 🚀 Quick Actions: One-click system operations
+- 📄 Data Export: Export system data as JSON or PDF reports
 ```
 
-### Core Components (7 files):
+### Core Components:
 ```
 components/admin/
+├── admin-analytics.tsx         - Data charts and analysis
+├── admin-sidebar.tsx           - Navigation sidebar
+├── download-admin-report.tsx   - Export functions (JSON/PDF)
 ├── equipment-overview.tsx      - Inventory dashboard
 ├── loan-tracking.tsx           - Loan status monitoring  
 ├── quick-actions.tsx           - Admin ops buttons
@@ -34,9 +38,10 @@ components/admin/
 app/api/admin/
 ├── users/route.ts              - GET/POST/PATCH users
 ├── equipment/route.ts          - Inventory data
+├── export/                     - JSON/PDF exports
 ├── loans/route.ts              - All loans overview
 ├── system/route.ts             - Health stats (students/staff count)
-└── sql-playground/route.ts    - Execute custom queries
+└── sql-playground/route.ts     - Execute custom queries
 ```
 
 ### Page Structure (app/admin/page.tsx):
@@ -57,9 +62,8 @@ Grid Layout:
 - ✅ Equipment totals use SUM(total_quantity)
 - ✅ React hydration resolved
 - ✅ Profile crash fixed for admins
-- **Security Audit COMPLETE (14 April)**: Full RBAC middleware + API hardening (equipment/stats/gym-entries role checks), SQL playground ADMIN-only, server-side dev tool gating, no DB role queries, standardized session.role everywhere. Production-secure.
-
-**Next:** Relational algebra visualizations, CSV export.
+- **Security Audit COMPLETE (15 June)**: Full RBAC middleware + API hardening, SQL playground ADMIN-only, server-side dev tool gating, standardized session.role.
+- ✅ Data exports and Relational Algebra visualizations implemented.
 
 ---
 *Updated to reflect recent UI/UX and feature enhancements.*

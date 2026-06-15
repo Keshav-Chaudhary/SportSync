@@ -16,7 +16,7 @@
 - 🔐 Secure: Student-only data via roll_no → user_id
 ```
 
-### Core Components (8 files):
+### Core Components:
 ```
 components/student/
 ├── active-loans.tsx            - Current borrowings w/ return links
@@ -26,7 +26,8 @@ components/student/
 ├── gym-history.tsx             - Personal gym visits log
 ├── history-loans.tsx           - Returned loans timeline
 ├── loans-tabs.tsx              - Active + History switcher
-└── student-quick-actions.tsx   - Student ops panel
+├── student-quick-actions.tsx   - Student ops panel
+└── student-sidebar.tsx         - Navigation sidebar
 ```
 
 ### Backend APIs:
@@ -63,7 +64,7 @@ Modern Terminal UI:
 ✅ Enhanced: Monthly goals reset tracking, live gym status
 ✅ Student Identity: Clean profile card w/ key details
 ✅ Self-Service Complete: No staff needed for basic ops
-**Security Audit COMPLETE (14 April)**: Strict student-only data isolation (user_id filters), middleware prevents all bypasses, full server-enforced RBAC. Production-secure.
+**Security Audit COMPLETE (15 June)**: Strict student-only data isolation (user_id filters), middleware prevents all bypasses, full server-enforced RBAC. Production-secure.
 ```
 
 **Students have full visibility and basic autonomy, wrapped in a premium modern UI.**
